@@ -27,6 +27,9 @@ module.exports = {
         ],
         'no-console': 'off',
         'linebreak-style': 'off',
+        'no-nested-ternary': 'off',
+        radix: 'off',
+        'no-underscore-dangle': 'off',
     },
 }
 
