@@ -1,3 +1,21 @@
+## quick install/setup
+
+```bash
+
+# instal all deps
+
+pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 eslint-config-airbnb-base@15.0.0 eslint-config-airbnb-typescript@17.0.0 prettier@2.8.4 eslint-config-prettier@8.6.0 eslint-plugin-prettier@4.2.1 eslint-plugin-import@2.25.3
+
+# copy .eslintrc.js
+# copy .prettierrc.js
+
+# update inclue array in tsconfig.json
+
+include: [".eslintrc.js", "src"]
+```
+
+## details setup
+
 1. follow this guide/video:
     - https://www.youtube.com/watch?v=kWIlrSorqFE&ab_channel=FutureWebDesign
     - https://youtu.be/cchqeWY0Nak?t=516
