@@ -1,38 +1,6 @@
-## quick install/setup (node js)
+## [quick install/setup (node js)](https://github.com/milon27/eslint-prettier-node-ts/blob/master/nodejs-setup)
+## [quick install/setup (react js)](https://github.com/milon27/eslint-prettier-node-ts/blob/master/react-js-setup.md)
 
-```bash
-
-# instal all deps
-
-pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 eslint-config-airbnb-base@15.0.0 eslint-config-airbnb-typescript@17.0.0 prettier@2.8.4 eslint-config-prettier@8.6.0 eslint-plugin-prettier@4.2.1 eslint-plugin-import@2.25.3
-
-# copy .eslintrc.js
-# copy .prettierrc.js
-
-# update inclue array in tsconfig.json
-
-include: [".eslintrc.js", "src"]
-```
-
-## quick install/setup (react js.....)
-
-```bash
-
-# instal all deps
-
-
-pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 eslint-config-airbnb-base@15.0.0 eslint-config-airbnb-typescript@17.0.0 prettier@2.8.4 eslint-config-prettier@8.6.0 eslint-plugin-prettier@4.2.1 eslint-plugin-import@2.25.3
-
-pnpm i -D eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
-
-
-# copy .eslintrc.js
-# copy .prettierrc.js
-
-# update inclue array in tsconfig.json
-
-include: [".eslintrc.js", "src"]
-```
 
 ## details setup
 
