@@ -1,4 +1,4 @@
-## [quick install/setup (node js)](https://github.com/milon27/eslint-prettier-node-ts/blob/master/nodejs-setup)
+## [quick install/setup (node js)](https://github.com/milon27/eslint-prettier-node-ts/blob/master/nodejs-setup.md)
 ## [quick install/setup (react js)](https://github.com/milon27/eslint-prettier-node-ts/blob/master/react-js-setup.md)
 
 
