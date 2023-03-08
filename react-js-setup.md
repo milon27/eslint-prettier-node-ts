@@ -29,7 +29,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
-        project: "./tsconfig.json",
+        project: ["./tsconfig.json", "./tsconfig.node.json"],
     },
     plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
@@ -48,10 +48,15 @@ module.exports = {
         "react/require-default-props": "off",
         "jsx-a11y/click-events-have-key-events": "off",
         "jsx-a11y/no-static-element-interactions": "off",
+        "react/jsx-no-constructed-context-values": "off",
+        "import/no-extraneous-dependencies": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/naming-convention": "off",
     },
 }
 
 // if you change any rule then reload the window
+
 
 ```
 
@@ -74,7 +79,7 @@ module.exports = {
 1. update inclue array in tsconfig.json
 
 ```
-include: [".eslintrc.js", "src"]
+"include": [".eslintrc.cjs", "src"],
 ```
 
 1. add eslint script in package.json
