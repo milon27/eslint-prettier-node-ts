@@ -41,6 +41,9 @@ module.exports = {
         ],
         "no-console": "off",
         "linebreak-style": "off",
+        "no-nested-ternary": "off",
+        radix: "off",
+        "no-underscore-dangle": "off",
         "react/react-in-jsx-scope": "off",
         "react/require-default-props": "off",
         "jsx-a11y/click-events-have-key-events": "off",
@@ -48,6 +51,7 @@ module.exports = {
     },
 }
 
+// if you change any rule then reload the window
 
 ```
 
@@ -56,8 +60,9 @@ module.exports = {
 ```js
 // prettier.config.js or .prettierrc.js or .prettierrc.cjs
 module.exports = {
-    trailingComma: 'es5',
+    trailingComma: "es5",
     tabWidth: 4,
+    printWidth: 115,
     semi: false,
     singleQuote: false,
 }
