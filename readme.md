@@ -1,10 +1,30 @@
-## quick install/setup
+## quick install/setup (node js)
 
 ```bash
 
 # instal all deps
 
 pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 eslint-config-airbnb-base@15.0.0 eslint-config-airbnb-typescript@17.0.0 prettier@2.8.4 eslint-config-prettier@8.6.0 eslint-plugin-prettier@4.2.1 eslint-plugin-import@2.25.3
+
+# copy .eslintrc.js
+# copy .prettierrc.js
+
+# update inclue array in tsconfig.json
+
+include: [".eslintrc.js", "src"]
+```
+
+## quick install/setup (react js.....)
+
+```bash
+
+# instal all deps
+
+
+pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 eslint-config-airbnb-base@15.0.0 eslint-config-airbnb-typescript@17.0.0 prettier@2.8.4 eslint-config-prettier@8.6.0 eslint-plugin-prettier@4.2.1 eslint-plugin-import@2.25.3
+
+pnpm i -D eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
+
 
 # copy .eslintrc.js
 # copy .prettierrc.js
@@ -23,14 +43,15 @@ include: [".eslintrc.js", "src"]
 1. install prettier extension in vscode and setup as default formatter
    ![default formatter](img/default-formatter.png)
 1. create node project `npm init -y`
-1. `pnpm i -D prettier eslint` (use exact version)
-1. `npx eslint --init`
-1. `pnpx install-peerdeps --dev eslint-config-airbnb-base`
-    - `pnpm install eslint-config-airbnb-base@15.0.0 eslint@^8.2.0 eslint-plugin-import@^2.25.2 --save-dev`
-1. make the extends array like this: `extends: ["airbnb-base", "plugin:@typescript-eslint/recommended"],`
-1. we need another plugin for typescript : eslint-config-airbnb-typescript `pnpm i eslint-config-airbnb-typescript`
+1. `pnpm i -D eslint` (use exact version)
+1. `npx eslint --init` [it will install few deps]
+1. `pnpx install-peerdeps --dev eslint-config-airbnb-base` [ for react: eslint-config-airbnb ]
+    - for node `pnpm install eslint-config-airbnb-base@15.0.0 eslint@^8.2.0 eslint-plugin-import@^2.25.2 --save-dev`
+    - for react: `pnpm install eslint-config-airbnb@19.0.4 eslint@^8.2.0 eslint-plugin-import@^2.25.3 eslint-plugin-jsx-a11y@^6.5.1 eslint-plugin-react@^7.28.0 eslint-plugin-react-hooks@^4.3.0 --save-dev`
+1. make the extends array like this: `extends: ["airbnb-base", "plugin:@typescript-eslint/recommended"],` or for react `extends: ["airbnb", "plugin:react/recommended","plugin:@typescript-eslint/recommended"]`
+1. we need another plugin for typescript : eslint-config-airbnb-typescript `pnpm i -D eslint-config-airbnb-typescript`
 1. update it extends: `extends: ["airbnb-base", "airbnb-typescript/base", "plugin:@typescript-eslint/recommended",]`
-
+    - for react `extends: ["airbnb", "airbnb-typescript", "plugin:react/recommended", "plugin:@typescript-eslint/recommended",]`
     - add parser option
 
 ```json
@@ -53,7 +74,7 @@ include: [".eslintrc.js", "src"]
 1. add .prettierrc.js
 
 ```js
-// prettier.config.js or .prettierrc.js
+// prettier.config.js or .prettierrc.js or .prettierrc.cjs
 module.exports = {
     trailingComma: 'es5',
     tabWidth: 4,
@@ -68,6 +89,7 @@ module.exports = {
 
 ```js
 extends: [
+    ...,
    'airbnb-base',
    'airbnb-typescript/base',
    'plugin:@typescript-eslint/recommended',
@@ -94,4 +116,10 @@ rules: {
         'no-console': 'off',
         'linebreak-style': 'off',
     }
+```
+
+1. add script for eslint
+```json
+"lint": "npx eslint . --fix",
+"lint:check": "npx eslint ."
 ```
