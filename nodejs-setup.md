@@ -13,7 +13,8 @@ pnpm i -D eslint@8.2.0 @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslin
 ```js
 module.exports = {
     env: {
-        browser: true,
+        node: true,
+        jest: true,
         es2021: true,
     },
     extends: [
